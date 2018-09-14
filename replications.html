@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eQTLGen - Replications</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/eqtlgen.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">eQTLGen</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="cis-eqtls.html"><em>Cis</em>-eQTLs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="trans-eqtls.html"><em>Trans</em>-eQTLs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="eqts.html">eQTs</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="replications.html">Replications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" style="margin-top: 75px">
+
+      <h2 class="my-4">Replications</h2>
+
+      <p>This page contains the replication results for the <em>trans</em>-eQTL analysis. Blood <em>trans</em>-eQTL were replicated in several purified cell types and GTEx postmortem tissues.</p>
+
+      <div class="card bg-light mb-3 border-0" style="max-width: 21rem;">
+        <div class="card-body">
+          <h5 class="card-title">Downloads</h5>
+          <ul>
+            <li><a href="">GTEx replication</a></li>
+            <li><a href="">Purified cell replication</a></li>
+            <li><a href="">README</a></li>
+          <ul>
+        </div>
+      </div>
+
+      <h3>Cohorts contributed to the replication analyses</h3>
+
+      <ul>
+        <li>Avon Longitudinal Study of Parents and Children (ALSPAC)</li>
+        <li>The Cohorte Lausannoise (CoLaus)</li>
+        <li>The Multiple Tissue Human Expression Resource (MuTHER)</li>
+        <li>Geuvadis</li>
+        <li>The i2QTL Consortium</li>
+        <li>Estonian Center for Translational Genomics cohort (EGCUT2)</li>
+        <li>BIOS Consortium</li>
+      </ul>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="pt-5">
+      <hr>
+      <div class="container text-center">
+        <img src="img/rug.jpg" height="100px">
+        <p class="m-0 text-center text-white">Copyright &copy; eQTLGen 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script>
+      $(document).ready( function () {
+        $('#table_id').DataTable();
+      });
+    </script>
+
+  </body>
+
+</html>
