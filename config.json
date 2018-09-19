@@ -1,8 +1,0 @@
-{
-    "label": "eQTLGen app",
-    "description": "Browse and download eQTLGen summary statistics",
-    "version": "v1.0.0",
-    "apiDependency": "v2",
-    "name": "eqtlgen",
-    "includeMenuAndFooter": false,
-}
