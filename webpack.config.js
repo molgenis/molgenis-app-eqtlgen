@@ -1,17 +1,19 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const GenerateJsonPlugin = require('generate-json-webpack-plugin');
-const ZipPlugin = require('zip-webpack-plugin');
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
+const ZipPlugin = require('zip-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPrefixPlugin = require('html-webpack-prefix-plugin')
 const packageJson = require('./package.json')
 
 module.exports = {
-  entry: [
-    './src/index.html'
-  ],
+  entry: {
+    'index': './src/index.html'
+  },
   output: {
+    filename: 'build.js',
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/plugin/app/' + packageJson.name + '/',
-    filename: 'build.js'
+    publicPath: ''
   },
   module: {
     rules: [
@@ -26,18 +28,29 @@ module.exports = {
         test: /\.html/,
         loader: 'file-loader?name=[name].[ext]',
       },
+      {
+        test: /\.js/,
+        loader: 'file-loader?name=[name].[ext]',
+      },
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html',
+      chunk: 'index',
+      prefix: '/plugin/app/' + packageJson.name + '/'
+    }),
+    new HtmlWebpackPrefixPlugin(),
     new GenerateJsonPlugin('config.json', {
       name: packageJson.name,
       label: packageJson.name,
       description: packageJson.description,
       version: packageJson.version,
-      apiDependency: "v2",
+      apiDependency: 'v2',
       includeMenuAndFooter: true,
       runtimeOptions: {
-        language: "en"
+        language: 'en'
       }
     }),
     new CopyWebpackPlugin([
@@ -45,7 +58,7 @@ module.exports = {
         from: path.resolve(__dirname, 'src/'),
         to: '',
         ignore: [,
-          '.gitignore'
+          '.*'
         ]
       }
     ]),
