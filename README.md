@@ -4,7 +4,7 @@ Frontend for eqtlgen paper
 ## MOLGENIS data upload
 Does not work for files larger then 150mb, must be loaded in Postgres itself.
 
-## Elasticsearch settings:
+## Elasticsearch:
 Update your elastic search setting to index files larger then 10000*10 rows.Execute this command on the command line.
 
 ```bash
