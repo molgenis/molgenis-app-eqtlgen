@@ -13,25 +13,6 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      },
-      {
-        test: /\.html/,
-        loader: 'file-loader?name=[name].[ext]',
-      },
-      {
-        test: /\.js/,
-        loader: 'file-loader?name=[name].[ext]',
-      },
-    ]
-  },
   plugins: [
     new GenerateJsonPlugin('config.json', {
       name: packageJson.name,

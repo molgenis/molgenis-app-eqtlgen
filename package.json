@@ -9,7 +9,7 @@
   "repository": "https://github.com/molgenis/molgenis-app-eqtlgen.git",
   "devDependencies": {
     "copy-webpack-plugin": "4.0.1",
-    "file-loader": "^1.1.4",
+    "file-loader": "^1.1.11",
     "generate-json-webpack-plugin": "0.3.1",
     "webpack": "^3.6.0",
     "zip-webpack-plugin": "2.0.0"
