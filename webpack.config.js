@@ -2,8 +2,6 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const ZipPlugin = require('zip-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackPrefixPlugin = require('html-webpack-prefix-plugin')
 const packageJson = require('./package.json')
 
 module.exports = {
@@ -35,13 +33,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-      chunk: 'index',
-      prefix: '/plugin/app/' + packageJson.name + '/'
-    }),
-    new HtmlWebpackPrefixPlugin(),
     new GenerateJsonPlugin('config.json', {
       name: packageJson.name,
       label: packageJson.name,
