@@ -1,6 +1,12 @@
 # molgenis-app-eqtlgen
 Frontend for eqtlgen paper
 
+## Configuration
+For a MOLGENIS app. This is structure is needed to make sure resources are loaded correctly:
+
+- src/css/vendor
+- src/js/vendor
+
 ## MOLGENIS data upload
 Does not work for files larger then 150mb, must be loaded in Postgres itself.
 
