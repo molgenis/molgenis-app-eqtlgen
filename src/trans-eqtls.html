@@ -36,7 +36,7 @@
               <a class="nav-link active" href="trans-eqtls.html"><em>Trans</em>-eQTLs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="eqts.html">eQTs</a>
+              <a class="nav-link" href="eqts.html">eQTS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="replications.html">Replications</a>
@@ -59,10 +59,9 @@
         <div class="card-body">
           <h5 class="card-title">Downloads</h5>
           <ul>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/trans-eQTL_significant_20180914.txt" download>Significant <em>trans</em>-eQTLs</a></li>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/README_trans_significant">README</a></li>
+            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/trans-eQTL_significant_20181017.txt.gz" download>Significant <em>trans</em>-eQTLs</a></li>
             <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/trans-eQTLs_full_20180905.txt.gz">Full <em>trans</em>-eQTL summary statistics</a></li>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/README_trans_full">README</a></li>
+            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/trans-eqtl/README_trans">README</a></li>
           <ul>
         </div>
       </div>
@@ -74,9 +73,9 @@
               <tr class="table-header-upper">
                 <th></th>
                 <th colspan="3">SNP</th>
-                <th colspan="4">Gene</th>
+                <th colspan="5">Gene</th>
                 <th colspan="2">Allele</th>
-                <th colspan="3"></th>
+		<th colspan="2"></th>
               </tr>
               <tr class="table-header-lower">
                   <th>P-value</th>
@@ -87,6 +86,7 @@
                   <th>Symbol</th>
                   <th>Chr</th>
                   <th>Pos (hg19)</th>
+		  <th>Z-score</th>
                   <th>Assessed</th>
                   <th>Other</th>
                   <th>Nr Cohorts</th>
@@ -104,6 +104,7 @@
               <th>Symbol</th>
               <th>Chr</th>
               <th>Pos</th>
+	      <th>Z-score</th>
               <th>Assessed</th>
               <th>Other</th>
               <th>Nr Cohorts</th>
@@ -134,7 +135,7 @@
       //https://eqtl.molgenis.org/api/v2/eqtlgen_eqts
       $(document).ready( function () {
 
-        var columns = ["pvalue", "SNP", "SNP.Chr", "SNP.Pos", "gene", "gene.Symbol", "gene.Chr", "gene.Pos", "assessed_allele", "other_allele", "nr_cohorts", "nr_samples", "FDR"]
+        var columns = ["pvalue", "SNP", "SNP.Chr", "SNP.Pos", "gene", "gene.Symbol", "gene.Chr", "gene.Pos", "zscore", "assessed_allele", "other_allele", "nr_cohorts", "nr_samples", "FDR"]
 
         $('#eqtl-table').DataTable( {
           serverSide: true,
@@ -179,6 +180,7 @@
                 row.push(json.items[i].gene.Symbol);
                 row.push(json.items[i].gene.Chr);
                 row.push(json.items[i].gene.Pos);
+		row.push(json.items[i].zscore);
                 row.push(json.items[i].assessed_allele);
                 row.push(json.items[i].other_allele);
                 row.push(json.items[i].nr_cohorts);
