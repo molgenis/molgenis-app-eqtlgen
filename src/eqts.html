@@ -55,16 +55,33 @@
       The statistically significant eQTS are browsable, the full results can be downloaded.
       <p/>
 
-      <div class="card bg-light mb-3 border-0" style="max-width: 21rem;">
-        <div class="card-body">
-          <h5 class="card-title">Downloads</h5>
-          <ul>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_significant_20181017.txt.gz">Significant eQTS</a></li>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_full_20181017.txt.gz">Full eQTS summary statistics</a></li>
-            <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/README_eQTS">README</a></li>
-          <ul>
+      <div class="card-group">
+        <div class="card bg-light mb-3 border-0" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Downloads</h5>
+            <ul>
+              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_significant_20181017.txt.gz">Significant eQTS</a></li>
+              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_full_20181204.txt.gz">Full eQTS summary statistics</a></li>
+              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/README_eQTS">README</a></li>
+            <ul>
+          </div>
         </div>
-      </div>
+        <div class="card bg-light mb-3 border-0" style="max-width: 25rem;">
+          <div class="card-body">
+            <h6 class="card-title"><b>Changelog</b></h6>
+              <div style="max-height: 200px;overflow-y: scroll;">
+              <code>
+                <small>
+                  <b>2018-12-04</b>: We identified an issue in our initial full eQTS results file, where the Z-scores were not referenced to the same allele
+                  correctly. The result is that all eQTS with a p-value other than 0.01 had their Z-score sign swapped. This issue did not affect the
+                  browsing table or significant results file. A new full results file has been uploaded, please use this file going forward.<br/>
+                  <b>2018-10-19</b>: Initial data release
+                </small>
+              </code>
+            </div>
+          </div>
+        </div>
+    </div>
 
       <h4 class="my-4">Significant eQTS</h4>
 
