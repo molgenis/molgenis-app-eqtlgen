@@ -4,7 +4,7 @@
   "description": "EQTL gen data presentation",
   "scripts": {
     "build": "webpack --progress --hide-modules",
-    "preversion": "npm build"
+    "postversion": "npm build"
   },
   "repository": "https://github.com/molgenis/molgenis-app-eqtlgen.git",
   "devDependencies": {
