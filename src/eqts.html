@@ -160,7 +160,7 @@
               request.sort = columns[d.order[0].column] + ':' + d.order[0].dir
               if (d.search.value) {
                 var searchUrlSafe = encodeURI(d.search.value)
-                request.q = 'gene.ID=q=' + searchUrlSafe + ',trait.ID=q=' + searchUrlSafe
+                request.q = 'gene.ID=q=' + searchUrlSafe + ',trait.ID=like=' + searchUrlSafe
               }
               return(request)
             },
