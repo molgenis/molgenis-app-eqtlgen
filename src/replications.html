@@ -55,27 +55,31 @@
 
       <h2 class="my-4">Replications</h2>
 
-      <p>This page contains the replication results for the <em>trans</em>-eQTL analysis. Blood <em>trans</em>-eQTL were replicated in several purified cell types and GTEx postmortem tissues.</p>
+      <p>This page contains the replication results for <em>cis</em>-eQTL, <em>trans</em>-eQTL and eQTS analyses. Top <em>cis</em>-eQTL effects were replicated in GTEx v7 postmortem tissues. Blood <em>trans</em>-eQTL were replicated in several purified cell types and GTEx v6 postmortem tissues. eQTS effects were replicated in GTEx v7 postmortem tissues.</p>
 
       <div class="card-group">
         <div class="card bg-light mb-3 border-0" style="max-width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">Downloads</h5>
-            <ul>
-              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/2018-07-13-cisEQTL-ReplicationOfTopEffectsInGTEx.txt.gz">GTEx replication</a></li>
-              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/2018-07-26-transEQTL-Replication-MasterTable.txt.gz">Purified cell replication</a></li>
-  	          <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/README">README</a></li>
+            <ul>		
+				<li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/2019-12-11-cisEQTL-ReplicationOfTopEffectsInGTEx_WoGTEx_TwoCohortFix.txt.gz">cis-eQTL replication</a></li>
+				<li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/2019-12-16-transEQTL-Replication-MasterTable.txt.gz">trans-eQTL replication</a></li>
+				<li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/2019-12-21-eQTS-Replication-MasterTable.txt.gz">eQTS replication</a></li>
+				<li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/replication/README">README</a></li>
             <ul>
           </div>
         </div>
         <div class="card bg-light mb-3 border-0" style="max-width: 18rem;">
           <div class="card-body">
             <h6 class="card-title"><b>Changelog</b></h6>
-            <code>
-              <small>
-                <b>2018-10-19</b>: Initial data release
-              </small>
-            </code>
+            <div style="max-height: 200px;overflow-y: scroll;">
+	            <code>
+	              <small>
+					<b>2019-12-23</b>: <em>Cis</em>-eQTL replications were done again with GTEx v7 and while requiring that each cis-eQTL was tested in at least 2 cohorts. <em>Trans</em>-eQTL replications include a new version of iPSC replication, as well as replication in all GTEx tissues while only testing those effects that were identified in eQTLGen when omitting GTEx whole blood results. eQTS replications are now added for the first time.<br/>
+					<b>2018-10-19</b>: Initial data release
+	              </small>
+	            </code>
+        	</div>
           </div>
         </div>
       </div>

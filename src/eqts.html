@@ -66,8 +66,8 @@
           <div class="card-body">
             <h5 class="card-title">Downloads</h5>
             <ul>
-              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_significant_20181017.txt.gz">Significant eQTS</a></li>
-              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/eQTS_full_20181204.txt.gz">Full eQTS summary statistics</a></li>
+              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/2019-12-12-eQTSFDR0.05-CohortInfoRemoved-BonferroniAdded.txt.gz">Significant eQTS</a></li>
+              <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/2019-12-12-eQTSFDR-CohortInfoRemoved-BonferroniAdded.txt.gz">Full eQTS summary statistics</a></li>
               <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/eqts/README_eQTS">README</a></li>
             <ul>
           </div>
@@ -78,6 +78,7 @@
               <div style="max-height: 200px;overflow-y: scroll;">
               <code>
                 <small>
+                  <b>2019-12-23</b>: The previous version had the sign of all results swapped, this is now fixed (i.e. the Z-score is now relative to a polygenic score increasing a trait). The files now also include Bonferroni-adjusted p-values.<br/>
                   <b>2018-12-19</b>: We identified an issue in our initial full eQTS results file, where the Z-scores were not referenced to the
                   effect direction correctly. This resulted in swapped Z-score signs for all the eQTS with other than GWAS P-value 0.01. This issue
                   did not affect the browsable table or significant results file. Full results file has been fixed and replaced. Please re-download
