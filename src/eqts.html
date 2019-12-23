@@ -39,13 +39,13 @@
               <a class="nav-link active" href="eqts.html">eQTS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="single-cell.html">sc-eQTLGen</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="replications.html">Replications</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="publications.html">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="single-cell.html">sc-eQTLGen</a>
             </li>
           </ul>
         </div>
@@ -135,8 +135,9 @@
 
     <script src="js/vendor/jquery/jquery.min.js"></script>
     <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.2/b-html5-1.5.2/datatables.min.js"></script>
     <script>
       $(document).ready( function () {
 
@@ -149,13 +150,17 @@
           language: { processing: "<i class='fa fa-spinner fa-spin fa-3x fa-fw'></i>" },
           dom: "<'row'<'col-sm-12 col-md-6'f><'col-sm-12 col-md-6'l>>" +
                 "<'row'<'col-sm-12'tr>>" +
-                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>" +
+                "<'row'<'col-sm-12'B>>",
           columnDefs: [ {
             "targets": 3,
             "orderable": false
           } ],
+          buttons: [
+            'copy', 'csv', 'excel', 'pdf'
+          ],
           ajax: {
-            url: 'https://molgenis106.gcc.rug.nl/api/v2/eqtlgen_eqts',
+            url: 'https://molgenis106.gcc.rug.nl/api/v2/eqtlgen_v2_eqts',
             "data": function (d) {
               var request = {};
               request.num = d.length
