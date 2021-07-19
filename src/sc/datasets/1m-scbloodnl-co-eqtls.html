@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>1M-scBloodNL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="../../css/eqtlgen.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139624100-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139624100-1');
+    </script>
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand" href="../index.html">sc-eQTLGen</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Datasets
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="candida.html">Candida</a>
+              <a class="dropdown-item" href="1m-scbloodnl.html">1M-scBloodNL</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../participating.html">Consortium members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+    <nav class="navbar sticky-top navbar-expand navbar-light bg-light" style="top: 56px">
+      <div class="container" style="padding-top: 2px;">
+          <a class="navbar-brand py-0" href="1m-scbloodnl.html" style="font-size: 1.2em;">1M-scBloodNL</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link py-0" href="1m-scbloodnl-dataset.html">Dataset</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-0" href="1m-scbloodnl-de.html">DE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-0" href="1m-scbloodnl-eqtls.html">eQTLs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-0 active" href="1m-scbloodnl-co-eqtls.html">co-expression QTLs</a>
+                </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+  <!-- Page Content -->
+  <div class="container" style="margin-top: 30px">
+
+    <h3>co-expression QTLs</h3>
+
+        <div class="card-group bg-light" style="max-width: 36rem;">
+      <div class="card bg-light border-0">
+          <div class="card-body">
+              <h5 class="card-title">Downloads</h5>
+              <ul>
+                  <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/sc-eqtl/">co-eQTLs per cell type and condition</a></li>
+                  <li><a href="https://molgenis26.gcc.rug.nl/downloads/eqtlgen/sc-eqtl/">Pathway analysis</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="card bg-light border-0">
+          <div class="card-body">
+              <h6 class="card-title"><b>Changelog</b></h6>
+              <code>
+                  <small>
+                      <b>2021-06-10</b>: Initial data release
+                  </small>
+              </code>
+          </div>
+      </div>
+    </div>
+
+
+    <figure class="figure mx-auto d-block pt-4"  style="max-width:800px;">
+        <img src="../../img/1m-scbloodnl/co-eqtls.svg" class="figure-img img-fluid">
+        <figcaption class="figure-caption">
+          <b>Interferon regulatory factor affects CLEC12A co-expression QTLs upon 3h pathogen stimulation in monocytes.</b><br/>
+          <em>
+            a. Number of co-expression QTLs identified in each of the stimulation*timepoint combinations for
+            those co-expression QTLs with over 100 co-expression QTLs in at least one condition. The 3h and 24h
+            timepoint are colored by pathogen stimulation (green: C. Albicans (CA), blue: M. Tuberculosis (MTB),
+            orange: P. Aeruginosa (PA). b. The lines in the top plots show co-expression between CLEC12A and
+            PML (most significant co-expression QTL across the 3h stimulation conditions) for individual cells in
+            the untreated (left), 3h CA (middle) and 24h CA (right) condition. In these plots, individual-specific
+            regression lines are shown, split by genotype. The average genotype-specific regression lines are
+            shown in black. The bottom boxplots depict Spearman’s rank correlation between CLEC12A and PML
+            expression, stratified by SNP rs12230244 genotype in the monocytes per individual, in the untreated
+            (left), 3h CA (middle) and 24h CA (right) stimulated cells (the V2 chemistry data is plotted). Each data
+            point shows a single individual. Box plots show median, first and third quartiles, and 1.5× the
+            interquartile range. c. Heatmap of the top-5 enriched pathways within the co-expressed CLEC12A coeQTL genes per stimulation*timepoint combination. Per combination, pathways are ranked based on
+            significance. White indicates that the pathway was not found to be enriched in that specific
+            stimulation*timepoint combination. The green box highlights pathways that are associated with all
+            3h stimulation conditions. d. Top 10 enriched putative transcription factor binding sites within the
+            CLEC12A co-expression QTL genes that: 1. showed a more positive strength of the co-expression
+            relationship in individuals with the TT as opposed to the AA genotype and 2. were identified in the 3h
+            stimulated (outer join) monocytes using the TRANSFAC database. e. Co-expression QTL analysis for
+            CLEC12A-SNP rs12230244 against the SLE PRS (calculated using those SLE GWAS SNPs with a P-value
+            threshold of <5x10-8) using whole blood bulk expression data from 3,553 individuals (BIOS
+            consortium). f. Proposed mechanism of action of CLEC12A co-expression QTLs. When pathogenassociated molecular patterns bind to a pattern recognition receptor (PRR), a signaling cascade is
+            initiated that eventually results in phosphorylation of interferon regulatory factors (IRFs).
+            Phosphorylated IRF then translocates to the nucleus, where it binds to specific DNA motifs such as
+            IFN-stimulated response elements. This can then activate transcription of IFNs and IFN-stimulated
+            available under aCC-BY-NC 4.0 International license.
+            was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+            bioRxiv preprint doi: https://doi.org/10.1101/2021.06.04.447088; this version posted June 6, 2021. The copyright holder for this preprint (which
+            genes (ISGs). Additionally, IRF is expected to bind to a region containing SNP rs12230244 (or any
+            another SNP in high LD), thereby regulating CLEC12A expression. In this case, depending on the SNP
+            genotype, the IRF binding and activation of CLEC12A expression is expected to be stronger (TT
+            genotype) or weaker (AA genotype). Many of the identified CLEC12A co-expression QTL genes are
+            involved in the IFN pathway (see 4b). This has to be the result of a common upstream factor (i.e. IRF)
+            of CLEC12A transcription that can also activate IFNs and ISGs, but cannot be the result of a
+            downstream regulator because this would have led to trans-eQTL effects for the same SNP
+            rs12230244 (which we do not observe). 
+          </em>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="pt-5">
+      <hr>
+      <div class="container text-center">
+          <img src="../../img/rug.jpg" height="100px">
+          <p class="m-0 text-center text-white">Copyright &copy; eQTLGen 2018</p>
+      </div>
+      <!-- /.container -->
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
