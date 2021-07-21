@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,373 +12,439 @@
 
     <link href="../css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="../css/eqtlgen.css" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139624100-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-139624100-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139624100-1');
     </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
 
         <a class="navbar-brand" href="index.html">sc-eQTLGen</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Datasets
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="datasets/candida.html">Candida</a>
-                <a class="dropdown-item" href="datasets/1m-scbloodnl.html">1M-scBloodNL</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="participating.html">Consortium members</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="publications.html">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Datasets
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="datasets/vanderwijst2018.html">van der Wijst 2018</a>
+                        <a class="dropdown-item" href="datasets/candida.html">Candida</a>
+                        <a class="dropdown-item" href="datasets/1m-scbloodnl.html">1M-scBloodNL</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="participating.html">Consortium members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
 
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container" style="margin-top: 75px">
+<div class="container" style="margin-top: 75px">
 
-      <div class="row">
+    <div class="row">
         <div class="col-lg" style="max-height:100px;">
-          <img src="../img/institutions/umcg.jpg" style="height: 75px;" class="img-fluid">
+            <img src="../img/institutions/umcg.jpg" style="height: 75px;" class="img-fluid">
         </div>
         <div class="col-lg" style="max-height:100px;">
-          <img src="../img/institutions/bsc.png" class="img-fluid">
+            <img src="../img/institutions/bsc.png" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/geneve.png" class="img-fluid">
+            <img src="../img/institutions/geneve.png" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/lumc.svg" class="img-fluid">
+            <img src="../img/institutions/lumc.svg" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/garvan-institute.png" class="img-fluid">
+            <img src="../img/institutions/garvan-institute.png" class="img-fluid">
         </div>
-      </div>
+    </div>
 
-      <div class="row" style="margin-top:15px;">
+    <div class="row" style="margin-top:15px;">
         <div class="col-lg">
-          <img src="../img/institutions/rug.jpg" class="img-fluid">
+            <img src="../img/institutions/rug.jpg" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/sanger.png" style="height: 60px;" class="img-fluid">
+            <img src="../img/institutions/sanger.png" style="height: 60px;" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/helmholtz-munchen.png" class="img-fluid">
+            <img src="../img/institutions/helmholtz-munchen.png" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/tel-aviv.png" class="img-fluid">
+            <img src="../img/institutions/tel-aviv.png" class="img-fluid">
         </div>
         <div class="col-lg">
-          <img src="../img/institutions/ucsf.png" style="height: 60px;" class="img-fluid">
+            <img src="../img/institutions/ucsf.png" style="height: 60px;" class="img-fluid">
         </div>
-      </div>
+    </div>
 
-      <div class="row justify-content-md-center" style="margin-top:15px;">
+    <div class="row justify-content-md-center" style="margin-top:15px;">
         <div class="col col-lg-2">
-          <img src="../img/institutions/nyu-abu-dhabi.jpg" style="height: 120px;" class="img-fluid">
+            <img src="../img/institutions/nyu-abu-dhabi.jpg" style="height: 120px;" class="img-fluid">
         </div>
         <div class="col col-lg-2">
-          <img src="../img/institutions/riken.jpg" style="margin-top: 10px; height: 100px;" class="img-fluid">
+            <img src="../img/institutions/riken.jpg" style="margin-top: 10px; height: 100px;" class="img-fluid">
         </div>
-
-      </div>
-
 
     </div>
 
-    <!-- Page Content -->
-    <div class="container" style="margin-top: 75px; max-width:700px">
 
-      <h2 class="my-4">Consortium members</h2>
+</div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+<!-- Page Content -->
+<div class="container" style="margin-top: 75px; max-width:700px">
+
+    <h2 class="my-4">Consortium members</h2>
+
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/lude_franke.jpeg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/lude_franke.jpeg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Lude Franke, dept. of Genetics, UMCG (Groningen, the Netherlands)</b>
-          <p align="justify">
-            <u>Study population:</u> general population of the Netherlands (20-80 years old)<br />
-            <u>Sample:</u> unstimulated and pathogen-stimulated PBMCs <br />
-            <br />
-            Our group studies the mechanisms and pathways through which pathogenic variants cause disease by correlating genetic variation with molecular data
-            (such as gene expression, methylation, and histone modifications) in thousands of individuals. Single-cell RNA-seq data now gives us the opportunity
-            to identify personalized effects on gene regulatory networks and pinpoint disease-relevant cell types.
-            Our group studies the mechanisms and pathways through which pathogenic variants cause disease by correlating genetic variation with molecular data
-            (such as gene expression, methylation, and histone modifications) in thousands of individuals. Single-cell RNA-seq data now gives us the opportunity
-            to identify personalized effects on gene regulatory networks and pinpoint disease-relevant cell types.
-          </p>
+            <b>Dr. Lude Franke, dept. of Genetics, UMCG (Groningen, the Netherlands)</b>
+            <p align="justify">
+                <u>Study population:</u> general population of the Netherlands (20-80 years old)<br/>
+                <u>Sample:</u> unstimulated and pathogen-stimulated PBMCs <br/>
+                <br/>
+                Our group studies the mechanisms and pathways through which pathogenic variants cause disease by
+                correlating genetic variation with molecular data
+                (such as gene expression, methylation, and histone modifications) in thousands of individuals.
+                Single-cell RNA-seq data now gives us the opportunity
+                to identify personalized effects on gene regulatory networks and pinpoint disease-relevant cell types.
+                Our group studies the mechanisms and pathways through which pathogenic variants cause disease by
+                correlating genetic variation with molecular data
+                (such as gene expression, methylation, and histone modifications) in thousands of individuals.
+                Single-cell RNA-seq data now gives us the opportunity
+                to identify personalized effects on gene regulatory networks and pinpoint disease-relevant cell types.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/youssef_idaghdour.png" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/youssef_idaghdour.png" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Youssef Idaghdour, dept. of Biology, NYUAD (Abu Dhabi, United Arab Emirates)</b>
+            <b>Dr. Youssef Idaghdour, dept. of Biology, NYUAD (Abu Dhabi, United Arab Emirates)</b>
 
-          <p align="justify">
-            <u>Study population:</u> West African children from Burkina Faso (2-10 years old)
-            <br />
-            <u>Sample:</u> PBMCs, before and after <i>Plasmodium infection</i>
-            <br />
-            <br />
-            The overarching goal of our group is to understand how genomes and environment interact moving from the architecture of the genome itself to protein function
-            and transitioning through the complex modes of epigenetic and gene expression regulation. We are particularly interested in studying these effects in vivo and
-            focus on metabolic traits and immune response to malaria infection.
-          </p>
+            <p align="justify">
+                <u>Study population:</u> West African children from Burkina Faso (2-10 years old)
+                <br/>
+                <u>Sample:</u> PBMCs, before and after <i>Plasmodium infection</i>
+                <br/>
+                <br/>
+                The overarching goal of our group is to understand how genomes and environment interact moving from the
+                architecture of the genome itself to protein function
+                and transitioning through the complex modes of epigenetic and gene expression regulation. We are
+                particularly interested in studying these effects in vivo and
+                focus on metabolic traits and immune response to malaria infection.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/pim_van_der_harst.png" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/pim_van_der_harst.png" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Pim van der Harst, dept. Of Cardiology, <br />UMCG (Groningen, the Netherlands)</b>
-          <p align="justify">
-            <u>Study population:</u> patients presenting with first ST-elevation myocardial infarction (STEMI) (40 – 80 years old)
-            <br />
-            <u>Sample:</u> PBMCs from STEMI patients
-            <br />
-            <br />
-            Our group aims to study the role of PBMCs in STEMI patients. Ultimately, this could lead to new disease concepts, novel therapeutic prospects and more
-            patient-tailored therapy.
-          </p>
+            <b>Dr. Pim van der Harst, dept. Of Cardiology, <br/>UMCG (Groningen, the Netherlands)</b>
+            <p align="justify">
+                <u>Study population:</u> patients presenting with first ST-elevation myocardial infarction (STEMI) (40 –
+                80 years old)
+                <br/>
+                <u>Sample:</u> PBMCs from STEMI patients
+                <br/>
+                <br/>
+                Our group aims to study the role of PBMCs in STEMI patients. Ultimately, this could lead to new disease
+                concepts, novel therapeutic prospects and more
+                patient-tailored therapy.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-5 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/joseph_powell.png" class="img-fluid"/>
-          </div>
+            <div class="col-lg-5 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/joseph_powell.png" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Joseph Powell, Head | Garvan-Weizmann Centre for Cellular Genomics, Garvan Institute of Medical Research (Sydney, Australia)</b>
+            <b>Dr. Joseph Powell, Head | Garvan-Weizmann Centre for Cellular Genomics, Garvan Institute of Medical
+                Research (Sydney, Australia)</b>
 
-          <p align="justify">
-            <u>Study population:</u> OneK1k: healthy aged population of Australians of N European descent (60-80 years old)
-            <br />
-            <u>Sample:</u> unstimulated PBMCs, genotypes, e-medical record
-            <br />
-            <br />
-            Our group focuses on demonstrating the genomic mechanisms by which loci contribute to complex human diseases, and working towards early stage diagnosis methods and targeted therapeutics. To do so, we apply existing computational approaches, and develop our own statistical genetics methods for analysis of large-scale next generation sequencing data. Following in silico experiments, we perform functional validation of statistical observations using molecular techniques such as high-throughput genome editing and cell phenotyping.
-          </p>
+            <p align="justify">
+                <u>Study population:</u> OneK1k: healthy aged population of Australians of N European descent (60-80
+                years old)
+                <br/>
+                <u>Sample:</u> unstimulated PBMCs, genotypes, e-medical record
+                <br/>
+                <br/>
+                Our group focuses on demonstrating the genomic mechanisms by which loci contribute to complex human
+                diseases, and working towards early stage diagnosis methods and targeted therapeutics. To do so, we
+                apply existing computational approaches, and develop our own statistical genetics methods for analysis
+                of large-scale next generation sequencing data. Following in silico experiments, we perform functional
+                validation of statistical observations using molecular techniques such as high-throughput genome editing
+                and cell phenotyping.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/chun_jimmie_ye.jpg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/chun_jimmie_ye.jpg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Chun Jimmie Ye, dept. Of Epidemiology and Biostatistics, UCSF (San Francisco, USA)</b>
-          <p align="justify">
-            <u>Study population:</u> Female of mostly European descent
-            <br />
-            <u>Sample:</u> PBMCs from lupus patients and healthy controls
-            <br />
-            <br />
-            We are interested in how genetics and environment interact to affect molecular phenotypes. The general strategy is to couple high-throughput sequencing with
-            population genetics to measure and model cellular response to environmental challenges across large patient cohorts. The lab develops experimental approaches
-            that enable the collection of functional genomic data en masse and computational methods that translate the data into biological insights. The initial focus
-            is to study human immune cells in healthy and diseased patients to understand host pathogen interactions and its role in autoimmunity.
-          </p>
+            <b>Dr. Chun Jimmie Ye, dept. Of Epidemiology and Biostatistics, UCSF (San Francisco, USA)</b>
+            <p align="justify">
+                <u>Study population:</u> Female of mostly European descent
+                <br/>
+                <u>Sample:</u> PBMCs from lupus patients and healthy controls
+                <br/>
+                <br/>
+                We are interested in how genetics and environment interact to affect molecular phenotypes. The general
+                strategy is to couple high-throughput sequencing with
+                population genetics to measure and model cellular response to environmental challenges across large
+                patient cohorts. The lab develops experimental approaches
+                that enable the collection of functional genomic data en masse and computational methods that translate
+                the data into biological insights. The initial focus
+                is to study human immune cells in healthy and diseased patients to understand host pathogen interactions
+                and its role in autoimmunity.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/martijn_nawijn.png" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/martijn_nawijn.png" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Martijn Nawijn, Groningen Research Institute for Asthma and COPD (GRIAC), UMCG (Groningen, the Netherlands)</b>
+            <b>Dr. Martijn Nawijn, Groningen Research Institute for Asthma and COPD (GRIAC), UMCG (Groningen, the
+                Netherlands)</b>
 
-          <p align="justify">
-            <u>Study population:</u> Individuals with chronic respiratory disease (asthma, COPD), and matched healthy controls
-            <br />
-            <u>Sample:</u> FACS-purified CD4 T cells from peripheral blood and matched airway wall biopsies
-            <br />
-            <br />
-            Our group focuses on understanding genetic mechanisms governing the immunological and (structural) cell biological alterations in airway wall that contribute to susceptibility for chronic respiratory disease. We aim to elucidate individual pathways leading to the inception, chronicity and exacerbations of asthma and COPD, paving the way for personalized diagnosis and treatment of disease.
-          </p>
+            <p align="justify">
+                <u>Study population:</u> Individuals with chronic respiratory disease (asthma, COPD), and matched
+                healthy controls
+                <br/>
+                <u>Sample:</u> FACS-purified CD4 T cells from peripheral blood and matched airway wall biopsies
+                <br/>
+                <br/>
+                Our group focuses on understanding genetic mechanisms governing the immunological and (structural) cell
+                biological alterations in airway wall that contribute to susceptibility for chronic respiratory disease.
+                We aim to elucidate individual pathways leading to the inception, chronicity and exacerbations of asthma
+                and COPD, paving the way for personalized diagnosis and treatment of disease.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/manolis_dermitzakis.jpeg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/manolis_dermitzakis.jpeg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Manolis Dermitzakis, dept. of Genetic Medicine and Development , University of Geneva (Geneva, Switzerland)</b>
+            <b>Dr. Manolis Dermitzakis, dept. of Genetic Medicine and Development , University of Geneva (Geneva,
+                Switzerland)</b>
 
-          <p align="justify">
-            <br />
-            Our group has a strong interest in population genomics and genetics of complex traits. We are using various methodologies to understand the role of genetic variation in phenotypic variation. We also aim to understand what fraction of genetic variation is harbored within functional elements of the human genome, and develop methodologies for their efficient identification.
-          </p>
+            <p align="justify">
+                <br/>
+                Our group has a strong interest in population genomics and genetics of complex traits. We are using
+                various methodologies to understand the role of genetic variation in phenotypic variation. We also aim
+                to understand what fraction of genetic variation is harbored within functional elements of the human
+                genome, and develop methodologies for their efficient identification.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/gosia_trim.jpg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-4 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/gosia_trim.jpg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Gosia Trynka, Immune Genomics Group, Wellcome Sanger Institute (Cambridge, UK) </b>
+            <b>Dr. Gosia Trynka, Immune Genomics Group, Wellcome Sanger Institute (Cambridge, UK) </b>
 
-          <p align="justify">
-            <u>Study population:</u> general European populations<br/>
-            <u>Sample:</u> Immune cells from healthy individuals stimulated with generic stimuli and blood samples from patients with autoimmune diseases.<br/>
+            <p align="justify">
+                <u>Study population:</u> general European populations<br/>
+                <u>Sample:</u> Immune cells from healthy individuals stimulated with generic stimuli and blood samples
+                from patients with autoimmune diseases.<br/>
 
+                <br/>
+                Our group combines immunologic and genomic assays to study the human immune system with a goal to map
+                genetic variants to functional cellular effects.
+                To refine and interpret the association signals to causal variants we develop statistical methods that
+                integrate disease associated variants with functional
+                genomic data such as chromatin markers, gene expression and gene pathways. Our goal is to translate
+                association signals to meaningful insight into disease
+                biology by identifying relevant cell types, and by pointing to functional variants and altered disease
+                pathways.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
+        <div class="col-lg-12">
+            <div class="col-lg-5 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/hon1.jpg" class="img-fluid"/>
+            </div>
+
+            <b>Dr. Chung Chau Hon, Laboratory for Genome Information Analysis, RIKEN (Tokyo, Japan)</b>
+            <p align="justify">
+                <u>Study population:</u> healthy Asian individuals from various ethnic groups.<br/>
+                <u>Sample:</u> unstimulated PBMCs, 5’-end scRNA-seq data<br/>
+
+                <br/>
+                The primary interest of our group is to understand the functions of non-coding transcription from human
+                genome, with a focus on their roles in diseases.
+                We are particularly interested in the potential roles of long non-coding RNAs and enhancers RNAs at
+                disease risk loci. Integrating cell type-specific
+                expression information with genetic information to identify functional long non-coding RNAs and
+                enhancers RNAs is one of our major goals. By applying
+                5’end based single-cell profiling methods to measure enhancer/promoter activity at the single cell level
+                across a wide range of cell types, we aim to
+                ultimately construct enhancer/promoter co-expression networks from these single cell data that allow us
+                to interpret (non-coding) disease risk loci.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
+        <div class="col-lg-12">
+            <div class="col-lg-5 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/theis.jpg" class="img-fluid"/>
+            </div>
+
+            <b>Dr. Fabian Theis, Institute of Computational Biology, Helmholtz Munich and Technical University of Munich
+                (Münich, Germany)</b>
             <br/>
-            Our group combines immunologic and genomic assays to study the human immune system with a goal to map genetic variants to functional cellular effects.
-            To refine and interpret the association signals to causal variants we develop statistical methods that integrate disease associated variants with functional
-            genomic data such as chromatin markers, gene expression and gene pathways. Our goal is to translate association signals to meaningful insight into disease
-            biology by identifying relevant cell types, and by pointing to functional variants and altered disease pathways.
-          </p>
-
-        </div>
-      </div>
-
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
-        <div class="col-lg-12">
-          <div class="col-lg-5 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/hon1.jpg" class="img-fluid"/>
-          </div>
-
-          <b>Dr. Chung Chau Hon, Laboratory for Genome Information Analysis, RIKEN (Tokyo, Japan)</b>
-          <p align="justify">
-            <u>Study population:</u> healthy Asian individuals from various ethnic groups.<br/>
-            <u>Sample:</u> unstimulated PBMCs, 5’-end scRNA-seq data<br/>
-
             <br/>
-            The primary interest of our group is to understand the functions of non-coding transcription from human genome, with a focus on their roles in diseases.
-            We are particularly interested in the potential roles of long non-coding RNAs and enhancers RNAs at disease risk loci. Integrating cell type-specific
-            expression information with genetic information to identify functional long non-coding RNAs and enhancers RNAs is one of our major goals. By applying
-            5’end based single-cell profiling methods to measure enhancer/promoter activity at the single cell level across a wide range of cell types, we aim to
-            ultimately construct enhancer/promoter co-expression networks from these single cell data that allow us to interpret (non-coding) disease risk loci.
-          </p>
+            <p align="justify">
+                The aim of our research is to develop and apply machine learning methods for solving complex biological
+                problems. We focus on data-driven modelling of
+                single-cell data, in particular scRNA-seq. This includes manifold and cell lineage learning using
+                probabilistic learning methods and neural networks as
+                well as setting up tools to enable a wider community. At the same time, we continue to apply and develop
+                systems biology models to gain insight into the
+                role and dynamics of specific variables in these high-dimensional data. We collaborate with multiple
+                experimental groups with applications from stem cell
+                biology, cell differentiation to disease modeling.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-5 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/theis.jpg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-5 float-right m-0 ml-4 mb-4 pr-0">
+                <img src="../img/matthias_heinig.jpeg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Fabian Theis, Institute of Computational Biology, Helmholtz Munich and Technical University of Munich (Münich, Germany)</b>
-          <br/>
-          <br/>
-          <p align="justify">
-            The aim of our research is to develop and apply machine learning methods for solving complex biological problems. We focus on data-driven modelling of
-            single-cell data, in particular scRNA-seq. This includes manifold and cell lineage learning using probabilistic learning methods and neural networks as
-            well as setting up tools to enable a wider community. At the same time, we continue to apply and develop systems biology models to gain insight into the
-            role and dynamics of specific variables in these high-dimensional data. We collaborate with multiple experimental groups with applications from stem cell
-            biology, cell differentiation to disease modeling.
-          </p>
+            <b>Dr. Matthias Heinig, Institute of Computational Biology, Helmholtz Munich (Münich, Germany)</b>
+            <br/>
+            <br/>
+            <p align="justify">
+                The aim of our research is the development and application of computational and statistical tools for
+                the identification of molecular regulatory networks
+                underlying common diseases and the genetic and epigenetic mechanisms controlling these networks from
+                population level DNA and multi-omics data sets.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
+    <div class="row pt-3 mb-4" style="background:#f8f8f8">
         <div class="col-lg-12">
-          <div class="col-lg-5 float-right m-0 ml-4 mb-4 pr-0">
-            <img src="../img/matthias_heinig.jpeg" class="img-fluid"/>
-          </div>
+            <div class="col-lg-3 float-left m-0 pl-0 mr-4 mb-4">
+                <img src="../img/ahmed_mahfouz.jpg" class="img-fluid"/>
+            </div>
 
-          <b>Dr. Matthias Heinig, Institute of Computational Biology, Helmholtz Munich (Münich, Germany)</b>
-          <br/>
-          <br/>
-          <p align="justify">
-            The aim of our research is the development and application of computational and statistical tools for the identification of molecular regulatory networks
-            underlying common diseases and the genetic and epigenetic mechanisms controlling these networks from population level DNA and multi-omics data sets.
-          </p>
-
-        </div>
-      </div>
-
-      <div class="row pt-3 mb-4" style="background:#f8f8f8">
-        <div class="col-lg-12">
-          <div class="col-lg-3 float-left m-0 pl-0 mr-4 mb-4">
-            <img src="../img/ahmed_mahfouz.jpg" class="img-fluid"/>
-          </div>
-
-          <b>Dr. Ahmed Mahfouz, Leiden computational Biology Center, LUMC (Leiden, the Netherlands)</b>
-          <br/>
-          <br/>
-          <p align="justify">
-            Our research focuses on developing computational methods to address biological questions in neuroscience and immunology. We combine machine learning,
-            statistics and visualization methods to analyze single cell data (mass cytometry and scRNA-seq). In particular, we are interested in spatio-temporal
-            data analysis, multi-omics data integration, and gene regulatory networks. We aim to use these approaches to study the diversity of neuronal and immune
-            cells as well as alterations in specific cell populations due to disease.
-          </p>
+            <b>Dr. Ahmed Mahfouz, Leiden computational Biology Center, LUMC (Leiden, the Netherlands)</b>
+            <br/>
+            <br/>
+            <p align="justify">
+                Our research focuses on developing computational methods to address biological questions in neuroscience
+                and immunology. We combine machine learning,
+                statistics and visualization methods to analyze single cell data (mass cytometry and scRNA-seq). In
+                particular, we are interested in spatio-temporal
+                data analysis, multi-omics data integration, and gene regulatory networks. We aim to use these
+                approaches to study the diversity of neuronal and immune
+                cells as well as alterations in specific cell populations due to disease.
+            </p>
 
         </div>
-      </div>
+    </div>
 
-      <ul>
+    <ul>
         <li><b>Dr. Rani Elkon, Dept. of Human Genetics, Tel Aviv University (Tel Aviv, Israël)</b></li>
-        <li><b>Dr. Marta Melé, Transcriptomics and Functional Genomics group, Barcelona Supercomputing Center (Barcelona, Spain)</b></li>
+        <li><b>Dr. Marta Melé, Transcriptomics and Functional Genomics group, Barcelona Supercomputing Center
+            (Barcelona, Spain)</b></li>
         <li><b>Dr. Towfique Raj, functional genomics group, ISMMS (New York, USA)</b></li>
         <li><b>Dr. Ephraim Kenigsberg, Genetics and Genomic Sciences, ISMMS (New York, USA) (edited) </b></li>
-        <li><b>Dr. Roger Pique-Regi and Dr. Francesca Luca, Molecular Medicine and Genetics and of Obstetrics and Gynecology, Wayne State University (Detroit, USA)</b></li>
+        <li><b>Dr. Roger Pique-Regi and Dr. Francesca Luca, Molecular Medicine and Genetics and of Obstetrics and
+            Gynecology, Wayne State University (Detroit, USA)</b></li>
         <li><b>Dr. Martin Hemberg, Cellular Genetics, Welcome Sanger Institute (Cambridge, UK)</b></li>
         <li><b>Dr. Oliver Stegle, Computational Genomics and System Genetics, DKFZ (Heidelberg, Germany)</b></li>
-        <li><b>Dr. Mikhail Spivakov, Functional Gene Control group, MRC London Institute of Medical Sciences (London, UK)</b></li>
-      </ul>
+        <li><b>Dr. Mikhail Spivakov, Functional Gene Control group, MRC London Institute of Medical Sciences (London,
+            UK)</b></li>
+    </ul>
 
-    </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
 
-  </body>
+</body>
 
 </html>
