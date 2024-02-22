@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>1M-scBloodNL</title>
+    <title>STEMI scRNA-seq</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -75,7 +75,7 @@
 
 <nav class="navbar sticky-top navbar-expand navbar-light bg-light" style="top: 56px">
     <div class="container" style="padding-top: 2px;">
-        <a class="navbar-brand py-0" href="1m-scbloodnl.html" style="font-size: 1.2em;">1M-scBloodNL</a>
+        <a class="navbar-brand py-0" href="blokland2024.html" style="font-size: 1.2em;">STEMI scRNA-seq</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -83,16 +83,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link py-0 active" href="1m-scbloodnl-dataset.html">Dataset</a>
+                    <a class="nav-link py-0 active" href="blokland2024-dataset.html">Dataset</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link py-0" href="1m-scbloodnl-de.html">DE</a>
+                    <a class="nav-link py-0" href="https://doi.org/10.1101/2023.05.02.23289370" target="_blank">Article</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link py-0" href="1m-scbloodnl-eqtls.html">eQTLs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link py-0" href="1m-scbloodnl-co-eqtls.html">co-expression QTLs</a>
+                    <a class="nav-link py-0" href="https://github.com/molgenis/STEMI-scRNA-seq" target="_blank">GitHub</a>
                 </li>
             </ul>
         </div>
@@ -110,23 +107,48 @@
                     <h5 class="card-title">Downloads</h5>
                     <ul>
                         <li>
-                            <a href="https://molgenis26.gcc.rug.nl/downloads/1m-scbloodnl/1M_RNA_counts.tar.gz">
-                                Raw gene expression counts (mtx format)
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/matrix_raw.mtx.gz">
+                                QC-ed raw gene expression counts (mtx format)
                             </a>
                         </li>
                         <li>
-                            <a href="https://molgenis26.gcc.rug.nl/downloads/1m-scbloodnl/1M_SCT_counts.tar.gz">
-                                SCT normalized counts (mtx format)
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/features_raw.tsv.gz">
+                                QC-ed genes for raw gene expression counts
                             </a>
                         </li>
                         <li>
-                            <a href="https://molgenis26.gcc.rug.nl/downloads/1m-scbloodnl/1M_cell_types.tsv">
-                                Cell type classification for every cell barcode
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/matrix.mtx.gz">
+                                QC-ed and SCT normalized counts (mtx format)
                             </a>
                         </li>
                         <li>
-                            <a href="https://molgenis26.gcc.rug.nl/downloads/1m-scbloodnl/1M_assignments_conditions_expid.tsv">
-                                Sample assignment and condition for every cell barcode
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/features.tsv.gz">
+                                QC-ed genes for SCT normalized counts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/barcodes.tsv.gz">
+                                QC-ed barcodes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/metadata.tsv.gz">
+                                metadata (including sample assignments, conditions and cell type assignments) for QC-ed barcodes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/stemi_unfiltered_matrix.mtx.gz">
+                                pre-QC raw gene expression counts (mtx format) for cells of STEMI donors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/stemi_unfiltered_features.tsv.gz">
+                                pre-QC genes for gene expression of cells of STEMI donors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/stemi_unfiltered_barcodes.tsv.gz">
+                                pre-QC barcodes
                             </a>
                         </li>
                     </ul>
@@ -137,7 +159,7 @@
                     <h6 class="card-title"><b>Changelog</b></h6>
                     <code>
                         <small>
-                            <b>2021-06-10</b>: Initial data release
+                            <b>2024-02-23</b>: Initial data release
                         </small>
                     </code>
                 </div>
@@ -145,11 +167,20 @@
         </div>
 
         <h5 class="pt-4">Raw data</h5>
-        Raw gene expression data are freely available and has been deposited at the European Genome-phenome Archive
-        (EGA),
-        which is hosted by the EBI and the CRG, under accession number
-        <a href="https://ega-archive.org/studies/EGAS00001005376" target="_blank">EGAS00001005376</a>.
+        Processed (de-anonymized) scRNA-seq data of the STEMI samples, including a text file that links each cell barcode to its respective individual, has been deposited at the European Genome-Phenome Archive (EGA), which is hosted by the EBI and the CRG, under accession number 
+        <a href="https://ega-archive.org/studies/EGAD00001010064" target="_blank">EGAD00001010064</a>. The 38 control samples come from the <a href="1m-scbloodnl-dataset.html" target="_blank">1m-scBloodNL</a> dataset.
+        </a>
 
+        <div>
+            <p>
+                The request for the STEMI cohort raw data can be made <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=-SJRM_TUZ02i_M1twg3ecHR364STzW1NsVFTzRaYt2VUQVU4VzlRRDU5ME1EUVhCUzA3TFY4QjVWRS4u" target="_blank">here</a>, 
+                or in the form below. A signed DAC is required, which can be found <a href="https://molgenis26.gcc.rug.nl/downloads/scrna-seq/blokland2024/2024_ELSI_DSA_UMCG_provider_personal_data_outside_EEA_VanBlokland2024.docx" target="_blank">here</a>
+            </p>
+        </div>
+
+        <div>
+            <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=-SJRM_TUZ02i_M1twg3ecHR364STzW1NsVFTzRaYt2VUQVU4VzlRRDU5ME1EUVhCUzA3TFY4QjVWRS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        </div>
 </div>
 <!-- /.container -->
 
